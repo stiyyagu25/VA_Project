@@ -48,12 +48,16 @@ with c1:
     use_container_width=True)
 with c2:
     st.markdown('### Donut chart')
-    plost.donut_chart(
-        data=seattle_weather,
-        theta=donut_theta,
-        color='weather',
-        legend='bottom', 
-        use_container_width=True)
+    # Scatter plot
+    scatter_plot = alt.Chart(seattle_weather).mark_circle().encode(
+    x=x_var,
+    y=y_var,
+    color='weather',
+    tooltip=['date', x_var, y_var]
+    ).interactive()
+
+# Display the scatter plot
+st.altair_chart(scatter_plot, use_container_width=True)
 
 # Row C
 st.markdown('### Line chart')
