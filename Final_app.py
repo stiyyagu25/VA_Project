@@ -49,17 +49,24 @@ with c1:
     use_container_width=True)
 with c2:
     
-    donut_var = st.sidebar.selectbox('Select data', ['weather', 'wind', 'precipitation'])
+    donut_var = st.sid
 
     # Main content
     st.markdown('### Donut chart')
-    plost.donut_chart(
-        data=seattle_weather,
-        value=donut_var,
+    st.sidebar.header('Scatter plot parameters')
+    x_var = st.sidebar.selectbox('X axis', ['temp_max', 'temp_min', 'precipitation'])
+    y_var = st.sidebar.selectbox('Y axis', ['temp_max', 'temp_min', 'precipitation'])
+
+    # Scatter plot
+    scatter_plot = alt.Chart(seattle_weather).mark_circle().encode(
+        x=x_var,
+        y=y_var,
         color='weather',
-        legend='bottom',
-        use_container_width=True
-    )
+        tooltip=['date', x_var, y_var]
+    ).interactive()
+
+# Display the scatter plot
+st.altair_chart(scatter_plot, use_container_width=True)
 
 # Row C
 st.markdown('### Line chart')
