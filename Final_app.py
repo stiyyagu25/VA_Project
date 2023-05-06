@@ -48,14 +48,14 @@ with c1:
     use_container_width=True)
 with c2:
     # Row C
-st.markdown('### Line chart and bar chart')
-st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
+    st.markdown('### Line chart and bar chart')
+    st.line_chart(seattle_weather, x = 'date', y = plot_data, height = plot_height)
 
-# Add a bar chart showing the distribution of the selected data
-st.subheader('Distribution of selected data')
-data_to_plot = seattle_weather[plot_data]
-counts = data_to_plot.value_counts()
-st.bar_chart(counts)
+    # Add a bar chart showing the distribution of the selected data
+    st.subheader('Distribution of selected data')
+    data_to_plot = seattle_weather[plot_data]
+    counts = data_to_plot.value_counts()
+    st.bar_chart(counts)
 
 # Row C
 st.markdown('### Line chart')
