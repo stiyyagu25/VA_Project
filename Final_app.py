@@ -48,6 +48,11 @@ with c1:
     height=345,
     use_container_width=True)
 with c2:
+    
+    # Sidebar
+    st.sidebar.header('Scatter plot parameters')
+    x_var = st.sidebar.selectbox('X axis', ['temp_max', 'temp_min', 'precipitation'])
+    y_var = st.sidebar.selectbox('Y axis', ['temp_max', 'temp_min', 'precipitation'])
     st.markdown('### Donut chart')
     # Scatter plot
     scatter_plot = alt.Chart(seattle_weather).mark_circle().encode(
@@ -57,8 +62,8 @@ with c2:
     tooltip=['date', x_var, y_var]
     ).interactive()
 
-# Display the scatter plot
-st.altair_chart(scatter_plot, use_container_width=True)
+    # Display the scatter plot
+    st.altair_chart(scatter_plot, use_container_width=True)
 
 # Row C
 st.markdown('### Line chart')
