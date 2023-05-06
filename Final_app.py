@@ -49,7 +49,7 @@ with c1:
     use_container_width=True)
 with c2:
     
-    donut_var = st.sid
+    
 
     # Main content
     st.markdown('### Donut chart')
