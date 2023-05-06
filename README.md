@@ -1,10 +1,13 @@
 Seattle Weather Dashboard
-This Streamlit app displays visualizations of weather data for Seattle, Washington. The app includes a heatmap, scatter chart, and line chart that can be customized based on user preferences.
+
+                          This Streamlit app displays visualizations of weather data for Seattle, Washington. The app includes a heatmap, scatter chart, and line chart that can be customized based on user preferences.
 
 Installation
-To run this app, you need to have Python 3.6 or higher installed on your computer. Clone the repository to your local machine and install the required dependencies using pip:
+
+                        To run this app, you need to have Python 3.6 or higher installed on your computer. Clone the repository to your local machine and install the required dependencies using pip:
 
 Copy code
+
 pip install streamlit pandas plost altair
 Usage
 To launch the app, navigate to the directory where the repository is located and run the following command:
@@ -25,6 +28,6 @@ Credits
 This app was created by Sucharitha Reddy Tiyyagura.
 
 
-
+  Deployed Streamlit app : https://stiyyagu25-va-project-final-app-iccf0n.streamlit.app/
 
 
