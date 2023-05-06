@@ -13,9 +13,6 @@ st.sidebar.header('')
 st.sidebar.subheader('Heat map parameter')
 time_hist_color = st.sidebar.selectbox('Color by', ('temp_min', 'temp_max')) 
 
-st.sidebar.subheader('Donut chart parameter')
-donut_theta = st.sidebar.selectbox('Select data', ('q2', 'q3'))
-
 st.sidebar.subheader('Line chart parameters')
 plot_data = st.sidebar.multiselect('Select data', ['temp_min', 'temp_max'], ['temp_min', 'temp_max'])
 plot_height = st.sidebar.slider('Specify plot height', 200, 500, 250)
@@ -52,7 +49,7 @@ with c2:
     
 
     # Main content
-    st.markdown('### Donut chart')
+    st.markdown('### Scatter chart')
     st.sidebar.header('Scatter plot parameters')
     x_var = st.sidebar.selectbox('X axis', ['temp_max', 'temp_min', 'precipitation'])
     y_var = st.sidebar.selectbox('Y axis', ['temp_max', 'temp_min', 'precipitation'])
