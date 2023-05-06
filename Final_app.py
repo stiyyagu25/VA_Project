@@ -19,10 +19,7 @@ st.sidebar.subheader('Line chart parameters')
 plot_data = st.sidebar.multiselect('Select data', ['temp_min', 'temp_max'], ['temp_min', 'temp_max'])
 plot_height = st.sidebar.slider('Specify plot height', 200, 500, 250)
 
-st.sidebar.markdown('''
----
-Created with ❤️ by [Data Professor](https://youtube.com/dataprofessor/).
-''')
+
 
 
 # Row A
