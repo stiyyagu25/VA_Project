@@ -65,8 +65,8 @@ with c2:
         tooltip=['date', x_var, y_var]
     ).interactive()
 
-# Display the scatter plot
-st.altair_chart(scatter_plot, use_container_width=True)
+    # Display the scatter plot
+    st.altair_chart(scatter_plot, use_container_width=True)
 
 # Row C
 st.markdown('### Line chart')
