@@ -49,12 +49,7 @@ with c1:
 with c2:
     # Row C
     # Create scatter plot
-    scatter_plot = alt.Chart(seattle_weather_clean).mark_circle().encode(
-    x='precipitation',
-    y='temp_max',
-    color='weather',
-    tooltip=['date', 'precipitation', 'temp_max', 'weather']
-    ).properties(width=500, height=400)
+    scatter_plot = alt.Chart(seattle_weather_clean).mark_circle().encode(x='precipitation',y='temp_max',color='weather', tooltip=['date', 'precipitation', 'temp_max', 'weather']).properties(width=500, height=400)
 
     # Show scatter plot
     st.altair_chart(scatter_plot)
