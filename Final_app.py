@@ -47,12 +47,13 @@ with c1:
     height=345,
     use_container_width=True)
 with c2:
-    # Row C
-    # Create scatter plot
-    scatter_plot = alt.Chart(seattle_weather_clean).mark_circle().encode(x='precipitation',y='temp_max',color='weather', tooltip=['date', 'precipitation', 'temp_max', 'weather']).properties(width=500, height=400)
-
-    # Show scatter plot
-    st.altair_chart(scatter_plot)
+    st.markdown('### Donut chart')
+    plost.donut_chart(
+        data=seattle_weather,
+        theta=donut_theta,
+        color='weather',
+        legend='bottom', 
+        use_container_width=True)
 
 # Row C
 st.markdown('### Line chart')
