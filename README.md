@@ -1,32 +1,30 @@
-# VA_Project
-Streamlit Dashboard Example
-This is a Streamlit dashboard that displays weather data for Seattle and stock information. It includes several visualizations created using the plost library.
+Seattle Weather Dashboard
+This Streamlit app displays visualizations of weather data for Seattle, Washington. The app includes a heatmap, scatter chart, and line chart that can be customized based on user preferences.
 
-Requirements
-This dashboard requires Python 3.6 or later and the following libraries:
-
-streamlit
-pandas
-numpy
-plost
-Pillow
-You can install these libraries using pip:
+Installation
+To run this app, you need to have Python 3.6 or higher installed on your computer. Clone the repository to your local machine and install the required dependencies using pip:
 
 Copy code
-pip install streamlit pandas numpy plost Pillow
+pip install streamlit pandas plost altair
 Usage
-To run the dashboard, simply run the following command in your terminal:
+To launch the app, navigate to the directory where the repository is located and run the following command:
 
 arduino
 Copy code
 streamlit run app.py
-This will start a Streamlit server and open the dashboard in your default web browser.
+This will start the Streamlit server and open the app in a new browser window. You can customize the app by selecting different options in the sidebar. The app displays three rows of content:
 
-Files
-app.py: This is the main file that contains the Streamlit application code.
-style.css: This file contains the CSS styles used in the dashboard.
-seattle-weather.csv: This file contains the Seattle weather data used in the dashboard.
-stocks_toy.csv: This file contains the stock information used in the dashboard.
-streamlit-logo-secondary-colormark-darktext.png: This file contains the Streamlit logo used in the dashboard.
-Acknowledgements
-This dashboard was created by Sucharitha Reddy Tiyyagura as an example of using Streamlit for data visualization. The Seattle weather data was obtained from Kaggle. The plost library was used to create the visualizations.
+Metrics: Displays key weather metrics for Seattle, including temperature, wind speed, and humidity.
+Heatmap: Displays a heatmap of temperature data for Seattle. You can customize the color scale and aggregation method using the sidebar.
+Scatter chart: Displays a scatter chart of weather data for Seattle. You can customize the x and y axes using the sidebar.
+Line chart: Displays a line chart of temperature data over time for Seattle. You can customize the y axis and plot height using the sidebar.
+Data
+The weather data used in this app is sourced from the seattle-weather.csv file, which is included in the repository. The file contains weather data for Seattle, Washington from 1948 to 2017. The data is parsed using the pandas library and displayed using the plost and altair libraries.
+
+Credits
+This app was created by Sucharitha Reddy Tiyyagura.
+
+
+
+
+
